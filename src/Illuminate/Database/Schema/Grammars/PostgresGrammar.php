@@ -408,7 +408,7 @@ class PostgresGrammar extends Grammar {
 	 */
 	protected function typeDateTime(Fluent $column)
 	{
-		return 'timestamp';
+		return 'timestamptz';
 	}
 
 	/**
@@ -430,7 +430,7 @@ class PostgresGrammar extends Grammar {
 	 */
 	protected function typeTimestamp(Fluent $column)
 	{
-		return 'timestamp';
+		return 'timestamptz';
 	}
 
 	/**

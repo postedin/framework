@@ -68,7 +68,12 @@ class SerializableClosure extends SuperClosure {
     {
         // Unserialize the data we need to reconstruct the SuperClosure
 		$this->state = unserialize($__serialized__);
-        list('code' => $__code__, 'context' => $__context__) = $this->state;
+		
+		if (isset($this->state['code'])) {
+			list('code' => $__code__, 'context' => $__context__) = $this->state;
+		} else {
+			list($__code__, $__context__) = $this->state;
+		}
 
         // Simulate the original context the Closure was created in
         extract($__context__);

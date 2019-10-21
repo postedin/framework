@@ -1,5 +1,7 @@
 # Laravel 4 Latest PHP Compatibility
 
+**NOTE:** this is to make things work in the latest version of PHP. It doesn't mean using PHP specific syntax will work with things like the queue serialization. For this you would most likely need to get the latest version of SuperClosure (https://github.com/jeremeamia/super_closure) working. We override a method to stop an error but nothing else.
+
 ## Installation
 
 `composer install postedin/laravel-4-php-latest`
@@ -25,6 +27,7 @@ $framework = $app['path.base'].
 
 ## PHP Compatibility
 
+- fixed an error in SuperClosure which must be from a PHP version change (https://github.com/jeremeamia/super_closure)
 - fixed broken query builder (E_NOTICE) due to a PHP 7.3 change to the `compact` function (https://www.php.net/compact#refsect1-function.compact-changelog)
 - fixed broken tests due to a PHP 7.2 change to `count` function (https://www.php.net/count#refsect1-function.count-changelog)
 - ~~updated classloader dependency (https://github.com/ClassPreloader/ClassPreloader)~~

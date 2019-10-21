@@ -1,3 +1,18 @@
+# Laravel 4 Latest PHP Compatibility
+
+You still need to install php-mcrypt using pecl. (https://stackoverflow.com/questions/55678023/how-to-install-mcrypt-on-php-7-3-3-ubuntu)
+
+## Changes
+
+- Postgresql uses time zone on all timestamps, hardcoded for our use and updated tests, fork and remove those commits if you don't want to do this
+
+## PHP Compatibility
+
+- fixed broken query builder (E_NOTICE) due to a PHP 7.3 change to the `compact` function (https://www.php.net/compact#refsect1-function.compact-changelog)
+- fixed broken tests due to a PHP 7.2 change to `count` function (https://www.php.net/count#refsect1-function.count-changelog)
+- ~~updated classloader dependency (https://github.com/ClassPreloader/ClassPreloader)~~
+- ~~updated SuperClosure dependency (https://github.com/jeremeamia/super_closure)~~
+
 ## Laravel Framework (Kernel)
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

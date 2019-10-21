@@ -1,6 +1,6 @@
 <?php namespace Illuminate\Support;
 
-use SuperClosure\SerializableClosure as SuperClosure;
+use Jeremeamia\SuperClosure\SerializableClosure as SuperClosure;
 
 /**
  * Extends SuperClosure for backwards compatibility.

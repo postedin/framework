@@ -1,13 +1,34 @@
+dist: xenial
 language: php
 
-php:
-  - 7.1
-  - 7.2
-  - 7.3
-  - 7.4
+env:
+  global:
+    - SETUP=stable
+
+matrix:
+  fast_finish: true
+  include:
+    - php: 7.1
+    - php: 7.1
+      env: SETUP=lowest
+    - php: 7.2
+    - php: 7.2
+      env: SETUP=lowest
+    - php: 7.3
+    - php: 7.3
+      env: SETUP=lowest
+    - php: 7.4snapshot
+    - php: 7.4snapshot
+      env: SETUP=lowest
+
+cache:
+  directories:
+    - $HOME/.composer/cache
 
 sudo: false
 
-install: travis_retry composer install --no-interaction --prefer-source
+install:
+  - if [[ $SETUP = 'stable' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-stable --no-suggest; fi
+  - if [[ $SETUP = 'lowest' ]]; then travis_retry composer update --prefer-dist --no-interaction --prefer-lowest --prefer-stable --no-suggest; fi
 
 script: vendor/bin/phpunit

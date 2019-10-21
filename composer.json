@@ -86,7 +86,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "4.3-dev"
+            "dev-compat": "4.4-dev"
         }
     },
     "suggest": {

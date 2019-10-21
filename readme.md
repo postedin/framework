@@ -1,5 +1,7 @@
 # Laravel 4 Latest PHP Compatibility
 
+[![Build Status](https://travis-ci.org/postedin/laravel-4-php-latest.svg?branch=compat)](https://travis-ci.org/postedin/laravel-4-php-latest)
+
 **NOTE:** this is to make things work in the latest version of PHP. It doesn't mean using PHP specific syntax will work with things like the queue serialization. For this you would most likely need to get the latest version of SuperClosure (https://github.com/jeremeamia/super_closure) working. We override a method to stop an error but nothing else.
 
 ## Installation
@@ -35,15 +37,8 @@ $framework = $app['path.base'].
 
 
 
-## Laravel Framework (Kernel)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-> **Note:** This repository contains the core code of the Laravel framework. If you want to build an application using Laravel 4, visit the main [Laravel repository](https://github.com/laravel/laravel).
 
 ## Laravel PHP Framework
 

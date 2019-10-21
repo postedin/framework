@@ -6,6 +6,17 @@
 
 Or change your `laravel/framework` to `postedin/laravel-4-php-latest` in your `composer.json` and update the version.
 
+Update your `bootstrap/start.php` and replace
+```php
+$framework = $app['path.base'].
+                 '/vendor/laravel/framework/src';
+```
+with
+```php
+$framework = $app['path.base'].
+                 '/vendor/postedin/laravel-4-php-latest/src';
+```
+
 **You still need to install php-mcrypt,** using pecl. (https://stackoverflow.com/questions/55678023/how-to-install-mcrypt-on-php-7-3-3-ubuntu)
 
 ## Changes

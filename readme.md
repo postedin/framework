@@ -30,8 +30,6 @@ $framework = $app['path.base'].
 - fixed an error in SuperClosure which must be from a PHP version change (https://github.com/jeremeamia/super_closure)
 - fixed broken query builder (E_NOTICE) due to a PHP 7.3 change to the `compact` function (https://www.php.net/compact#refsect1-function.compact-changelog)
 - fixed broken tests due to a PHP 7.2 change to `count` function (https://www.php.net/count#refsect1-function.count-changelog)
-- ~~updated classloader dependency (https://github.com/ClassPreloader/ClassPreloader)~~
-- ~~updated SuperClosure dependency (https://github.com/jeremeamia/super_closure)~~
 
 
 

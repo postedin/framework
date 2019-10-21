@@ -1,5 +1,11 @@
 # Laravel 4 Latest PHP Compatibility
 
+## Installation
+
+`composer install postedin/laravel-4-php-latest`
+
+Or change your `laravel/framework` to `postedin/laravel-4-php-latest` in your `composer.json` and update the version.
+
 **You still need to install php-mcrypt,** using pecl. (https://stackoverflow.com/questions/55678023/how-to-install-mcrypt-on-php-7-3-3-ubuntu)
 
 ## Changes

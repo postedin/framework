@@ -1,6 +1,6 @@
 {
-    "name": "laravel/framework",
-    "description": "The Laravel Framework.",
+    "name": "postedin/laravel-4-php-latest",
+    "description": "The Laravel Framework. Legacy (4.2+) but working with latest versions of PHP.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "authors": [

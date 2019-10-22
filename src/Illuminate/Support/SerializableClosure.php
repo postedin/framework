@@ -55,4 +55,30 @@ class SerializableClosure extends SuperClosure {
 			list($this->code, $this->variables) = unserialize($this->serialize());
 		}
 	}
+
+	/**
+     * Unserializes the closure data and recreates the closure. Attempts to recreate the closure's context as well by
+     * extracting the used variables into the scope. Variables names in this method are surrounded with underlines in
+     * order to prevent collisions with the variables in the context. NOTE: There be dragons here! Both `eval` and
+     * `extract` are used in this method
+     *
+     * @param string $__serialized__
+     */
+    public function unserialize($__serialized__)
+    {
+        // Unserialize the data we need to reconstruct the SuperClosure
+		$this->state = unserialize($__serialized__);
+		
+		if (isset($this->state['code'])) {
+			list('code' => $__code__, 'context' => $__context__) = $this->state;
+		} else {
+			list($__code__, $__context__) = $this->state;
+		}
+
+        // Simulate the original context the Closure was created in
+        extract($__context__);
+
+        // Evaluate the code to recreate the Closure
+        eval("\$this->closure = {$__code__};");
+    }
 }

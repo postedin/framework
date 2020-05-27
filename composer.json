@@ -1,6 +1,6 @@
 {
     "name": "postedin/laravel-4-php-latest",
-    "description": "The Laravel Framework. Legacy (4.2+) but working with latest versions of PHP.",
+    "description": "The Laravel Framework. Legacy (4.2+) but working with latest versions of PHP and dependencies.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "authors": [
@@ -20,7 +20,7 @@
         "nesbot/carbon": "~1.0",
         "patchwork/utf8": "~1.1",
         "phpseclib/phpseclib": "0.3.*",
-        "predis/predis": "0.8.*",
+        "predis/predis": "^2.0@dev",
         "stack/builder": "~1.0",
         "swiftmailer/swiftmailer": "~5.1",
         "symfony/browser-kit": "2.7.*",
